@@ -1,0 +1,821 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Kanit", sans-serif;
+  background: #0b0b0b;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+/* =====================================
+   LOGIN
+===================================== */
+
+.login {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 58% 42%;
+  background: #f2f2f0;
+}
+
+/* LEFT */
+
+.login-left {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 45px 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  background:
+    linear-gradient(
+      120deg,
+      rgba(0, 0, 0, 0.88),
+      rgba(11, 33, 56, 0.92)
+    ),
+    #07111d;
+}
+
+.login-left::before {
+  content: "10";
+  position: absolute;
+  right: -40px;
+  bottom: -100px;
+  font-size: 430px;
+  font-weight: 700;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.035);
+}
+
+.login-left::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  right: -250px;
+  top: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.login-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 2;
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.login-logo span {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 20px;
+}
+
+.login-main {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.login-main small {
+  color: #60a5fa;
+  font-size: 11px;
+  letter-spacing: 4px;
+}
+
+.login-main h1 {
+  margin: 20px 0;
+  font-size: clamp(65px, 9vw, 125px);
+  line-height: 0.83;
+  letter-spacing: -5px;
+}
+
+.login-main h1 em {
+  color: #60a5fa;
+  font-style: normal;
+}
+
+.login-main p {
+  max-width: 390px;
+  margin: 30px 0 0;
+  color: #aab5c4;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.login-footer {
+  position: relative;
+  z-index: 2;
+  color: #667386;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+
+/* RIGHT */
+
+.login-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  background: #f2f2f0;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 420px;
+}
+
+.login-title > span {
+  color: #2563eb;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.login-title h2 {
+  margin: 15px 0 45px;
+  color: #101010;
+  font-size: 52px;
+  line-height: 0.95;
+}
+
+.login-title h2 em {
+  color: #2563eb;
+  font-style: normal;
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-box label {
+  margin-bottom: 9px;
+  color: #5e6570;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.login-box input {
+  width: 100%;
+  height: 55px;
+  margin-bottom: 27px;
+  padding: 0 18px;
+  border: 0;
+  border-bottom: 1px solid #cfd2d5;
+  outline: 0;
+  background: transparent;
+  color: #111;
+  font-size: 14px;
+  transition: 0.25s;
+}
+
+.login-box input:focus {
+  border-bottom-color: #2563eb;
+}
+
+.login-box input::placeholder {
+  color: #a5a9ae;
+}
+
+.login-box button {
+  width: 100%;
+  height: 58px;
+  margin-top: 8px;
+  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  background: #101010;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  transition: 0.3s;
+}
+
+.login-box button:hover {
+  background: #2563eb;
+}
+
+.login-box button span {
+  font-size: 20px;
+}
+
+.login-note {
+  margin-top: 30px;
+  color: #a0a3a7;
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+
+/* =====================================
+   SITE
+===================================== */
+
+.site {
+  min-height: 100vh;
+  background: #f2f2f0;
+  color: #101010;
+}
+
+
+/* TOPBAR */
+
+.topbar {
+  height: 75px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dededb;
+  background: #f2f2f0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.brand-mark {
+  width: 37px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #101010;
+  color: white;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.online {
+  color: #747a82;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.online i {
+  width: 6px;
+  height: 6px;
+  margin-right: 7px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+.topbar button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: #101010;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero {
+  min-height: 690px;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  overflow: hidden;
+  background: #0c1722;
+  color: white;
+}
+
+.hero-left {
+  padding: 100px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-small {
+  margin-bottom: 25px;
+  color: #60a5fa;
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(65px, 8vw, 120px);
+  line-height: 0.82;
+  letter-spacing: -5px;
+}
+
+.hero h1 span {
+  display: block;
+  color: #60a5fa;
+}
+
+.hero-bottom {
+  margin-top: 65px;
+  display: flex;
+  gap: 50px;
+}
+
+.position {
+  min-width: 130px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.position small {
+  color: #6f7e90;
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+.position strong {
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.hero-description {
+  max-width: 390px;
+  color: #9ba8b8;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+
+/* HERO RIGHT */
+
+.hero-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.number {
+  position: absolute;
+  right: -20px;
+  bottom: -100px;
+  color: rgba(255, 255, 255, 0.04);
+  font-size: 500px;
+  font-weight: 700;
+  line-height: 0.8;
+}
+
+.player-circle {
+  width: 360px;
+  height: 360px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+}
+
+.player-circle::before {
+  content: "";
+  position: absolute;
+  inset: 25px;
+  border: 1px solid rgba(96, 165, 250, 0.4);
+  border-radius: 50%;
+}
+
+.player-circle div {
+  width: 230px;
+  height: 290px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    145deg,
+    #1b4269,
+    #07111d
+  );
+  color: white;
+  font-size: 150px;
+  font-weight: 700;
+  border-radius: 45% 45% 10% 10%;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
+}
+
+.vertical-text {
+  position: absolute;
+  right: 35px;
+  top: 50%;
+  color: #65768a;
+  font-size: 8px;
+  letter-spacing: 4px;
+  writing-mode: vertical-rl;
+}
+
+
+/* =====================================
+   SECTION
+===================================== */
+
+.section {
+  padding: 130px 8%;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 30px;
+}
+
+.section-number {
+  color: #a1a5a8;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.section-label {
+  margin-bottom: 20px;
+  color: #2563eb;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.section-content h2,
+.career-content h2,
+.skills-content h2 {
+  margin: 0;
+  font-size: clamp(45px, 6vw, 75px);
+  line-height: 0.9;
+  letter-spacing: -3px;
+}
+
+.section-content h2 em,
+.career-content h2 em,
+.skills-content h2 em {
+  color: #2563eb;
+  font-style: normal;
+}
+
+.section-content > p {
+  max-width: 650px;
+  margin-top: 40px;
+  color: #666d76;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.intro {
+  grid-template-columns: 100px 1fr 0.8fr;
+  background: #f2f2f0;
+}
+
+.quick-info {
+  align-self: end;
+  border-top: 1px solid #cfd1cf;
+}
+
+.quick-info div {
+  min-height: 65px;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #d8d9d7;
+}
+
+.quick-info span {
+  color: #93989c;
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+.quick-info strong {
+  font-size: 12px;
+  font-weight: 500;
+  text-align: right;
+}
+
+
+/* =====================================
+   CAREER
+===================================== */
+
+.career {
+  grid-template-columns: 100px 1fr;
+  background: #101820;
+  color: white;
+}
+
+.career .section-number {
+  color: #526274;
+}
+
+.timeline {
+  margin-top: 80px;
+  border-top: 1px solid #344250;
+}
+
+.timeline-row {
+  min-height: 180px;
+  padding: 35px 0;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  border-bottom: 1px solid #344250;
+}
+
+.timeline-row .year {
+  color: #60a5fa;
+  font-size: 11px;
+}
+
+.timeline-row small {
+  color: #65768a;
+  font-size: 8px;
+  letter-spacing: 3px;
+}
+
+.timeline-row h3 {
+  margin: 10px 0;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.timeline-row p {
+  max-width: 550px;
+  margin: 0;
+  color: #8492a2;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+
+/* =====================================
+   SKILLS
+===================================== */
+
+.skills {
+  background: #f2f2f0;
+}
+
+.skill-list {
+  margin-top: 70px;
+  border-top: 1px solid #cfd1cf;
+}
+
+.skill {
+  min-height: 145px;
+  padding: 30px 10px;
+  display: grid;
+  grid-template-columns: 80px 1fr 40px;
+  align-items: center;
+  border-bottom: 1px solid #cfd1cf;
+  transition: 0.3s;
+}
+
+.skill:hover {
+  padding-left: 25px;
+  background: #e9eae8;
+}
+
+.skill > span {
+  color: #a1a5a8;
+  font-size: 10px;
+}
+
+.skill h3 {
+  margin: 0 0 5px;
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+
+.skill p {
+  margin: 0;
+  color: #777d84;
+  font-size: 12px;
+}
+
+.skill strong {
+  color: #2563eb;
+  font-size: 22px;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+  min-height: 130px;
+  padding: 40px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #080d13;
+  color: #657386;
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+.footer-brand {
+  color: white;
+  font-size: 14px;
+  letter-spacing: 4px;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 900px) {
+
+  .login {
+    grid-template-columns: 1fr;
+  }
+
+  .login-left {
+    min-height: 45vh;
+    padding: 35px;
+  }
+
+  .login-main h1 {
+    font-size: 70px;
+  }
+
+  .login-right {
+    min-height: 55vh;
+    padding: 50px 30px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-left {
+    min-height: 570px;
+  }
+
+  .hero-right {
+    min-height: 500px;
+  }
+
+  .intro {
+    grid-template-columns: 70px 1fr;
+  }
+
+  .quick-info {
+    grid-column: 2;
+    margin-top: 60px;
+  }
+
+  .section {
+    grid-template-columns: 70px 1fr;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .login-left {
+    min-height: 48vh;
+    padding: 28px 22px;
+  }
+
+  .login-main h1 {
+    font-size: 55px;
+    letter-spacing: -3px;
+  }
+
+  .login-main p {
+    font-size: 13px;
+  }
+
+  .login-right {
+    padding: 45px 22px;
+  }
+
+  .login-title h2 {
+    font-size: 43px;
+  }
+
+  .topbar {
+    padding: 0 20px;
+  }
+
+  .online {
+    display: none;
+  }
+
+  .hero-left {
+    padding: 70px 25px;
+  }
+
+  .hero h1 {
+    font-size: 57px;
+    letter-spacing: -3px;
+  }
+
+  .hero-bottom {
+    margin-top: 45px;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .hero-right {
+    min-height: 420px;
+  }
+
+  .player-circle {
+    width: 290px;
+    height: 290px;
+  }
+
+  .player-circle div {
+    width: 180px;
+    height: 230px;
+    font-size: 110px;
+  }
+
+  .number {
+    font-size: 350px;
+  }
+
+  .section {
+    padding: 85px 22px;
+    grid-template-columns: 45px 1fr;
+    gap: 10px;
+  }
+
+  .intro {
+    grid-template-columns: 45px 1fr;
+  }
+
+  .quick-info {
+    grid-column: 2;
+  }
+
+  .section-content h2,
+  .career-content h2,
+  .skills-content h2 {
+    font-size: 48px;
+  }
+
+  .timeline {
+    margin-top: 50px;
+  }
+
+  .timeline-row {
+    grid-template-columns: 45px 1fr;
+  }
+
+  .skill {
+    grid-template-columns: 45px 1fr 25px;
+  }
+
+  .skill h3 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 35px 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
